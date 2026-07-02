@@ -1,5 +1,20 @@
 # HTNL: Hierarchical Group Lasso — Four Optimisation Methods
 
+<p align="center">
+  <a href="#quick-start"><img src="https://img.shields.io/badge/quickstart-synthetic%20run-2ea44f" alt="Quickstart"></a>
+  <a href="#overview"><img src="https://img.shields.io/badge/overview-4%20optimisers-7c3aed" alt="Overview"></a>
+  <a href="#data"><img src="https://img.shields.io/badge/data-synthetic%20%7C%20.mat%20real--world-2563eb" alt="Data"></a>
+  <a href="#programmatic-usage"><img src="https://img.shields.io/badge/API-run__method__fast-f97316" alt="Programmatic usage"></a>
+  <a href="#references"><img src="https://img.shields.io/badge/references-TKDE%202019%20%7C%20NeurIPS%202024-64748b" alt="References"></a>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/python-3.9%2B-blue" alt="Python 3.9+">
+  <img src="https://img.shields.io/badge/method-hierarchical%20group%20lasso-lightgrey" alt="Hierarchical group lasso">
+  <img src="https://img.shields.io/badge/tasks-binary%20classification-lightgrey" alt="Binary classification">
+  <img src="https://img.shields.io/badge/API%20keys-not%20required-green" alt="API keys not required">
+</p>
+
 Reference implementation for the paper:
 
 > **Optimising Hierarchical Tensor-Network Lasso: A Comparative Study of
@@ -38,27 +53,26 @@ selection, evaluated on 11 real-world binary classification datasets:
 
 ## Repository Structure
 
-```
-htnl_code/
-├── README.md
-├── requirements.txt
-├── figures/
-│   └── 1-3.png              ← pipeline overview figure
-└── htnl/
-    ├── models/
-    │   ├── _core.py          ← shared: Huber-hinge, weighted-ridge, active-set
-    │   ├── ncf.py            ← NCF lattice and Φ precomputation
-    │   ├── htnl_original.py  ← Method 0: Original (TKDE 2019)
-    │   ├── htnl_vqf.py       ← Method 1: VQF/MM
-    │   ├── htnl_admm.py      ← Method 2: ADMM-Bisect
-    │   ├── htnl_wgl.py       ← Method 3: WGL-Cont
-    │   └── htnl_real_fast.py ← Vectorised single-task adapter for real data
-    ├── data/
-    │   ├── real_data_loader.py  ← Load .mat datasets
-    │   └── synthetic.py         ← Synthetic data generator (baselines)
-    └── experiments/
-        ├── run_all.py        ← Run all methods on synthetic data
-        └── run_real_data.py  ← Run all methods on real datasets
+```text
+.
+|-- README.md
+|-- requirements.txt
+|-- figures/
+|   `-- 1-3.png                  # Algorithm comparison figure
+`-- htnl/
+    |-- models/
+    |   |-- _core.py             # Shared Huber-hinge, weighted-ridge, active-set utilities
+    |   |-- ncf.py               # NCF lattice and Phi precomputation
+    |   |-- htnl_original.py     # Method 0: Original (TKDE 2019)
+    |   |-- htnl_vqf.py          # Method 1: VQF/MM
+    |   |-- htnl_admm.py         # Method 2: ADMM-Bisect
+    |   |-- htnl_wgl.py          # Method 3: WGL-Cont
+    |   `-- htnl_real_fast.py    # Vectorised single-task adapter for real data
+    |-- data/
+    |   `-- real_data_loader.py  # Load .mat datasets
+    `-- experiments/
+        |-- run_all.py           # Run all methods on synthetic data
+        `-- run_real_data.py     # Run all methods on real datasets
 ```
 
 ---
@@ -66,6 +80,11 @@ htnl_code/
 ## Installation
 
 ```bash
+git clone git@github.com:Hik289/HTNL.git
+cd HTNL
+
+python -m venv .venv
+source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
