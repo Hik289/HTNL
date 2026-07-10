@@ -1,14 +1,6 @@
 # HTNL: Hierarchical Group Lasso — Four Optimisation Methods
 
 <p align="center">
-  <a href="#quick-start"><img src="https://img.shields.io/badge/quickstart-synthetic%20run-2ea44f" alt="Quickstart"></a>
-  <a href="#overview"><img src="https://img.shields.io/badge/overview-4%20optimisers-7c3aed" alt="Overview"></a>
-  <a href="#data"><img src="https://img.shields.io/badge/data-synthetic%20%7C%20.mat%20real--world-2563eb" alt="Data"></a>
-  <a href="#programmatic-usage"><img src="https://img.shields.io/badge/API-run__method__fast-f97316" alt="Programmatic usage"></a>
-  <a href="#references"><img src="https://img.shields.io/badge/references-TKDE%202019%20%7C%20NeurIPS%202024-64748b" alt="References"></a>
-</p>
-
-<p align="center">
   <img src="https://img.shields.io/badge/python-3.9%2B-blue" alt="Python 3.9+">
   <img src="https://img.shields.io/badge/method-hierarchical%20group%20lasso-lightgrey" alt="Hierarchical group lasso">
   <img src="https://img.shields.io/badge/tasks-binary%20classification-lightgrey" alt="Binary classification">
