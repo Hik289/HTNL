@@ -4,7 +4,6 @@
   <img src="https://img.shields.io/badge/python-3.9%2B-blue" alt="Python 3.9+">
   <img src="https://img.shields.io/badge/method-hierarchical%20group%20lasso-lightgrey" alt="Hierarchical group lasso">
   <img src="https://img.shields.io/badge/tasks-binary%20classification-lightgrey" alt="Binary classification">
-  <img src="https://img.shields.io/badge/API%20keys-not%20required-green" alt="API keys not required">
 </p>
 
 Reference implementation for the paper:
