@@ -1,9 +1,8 @@
 # HTNL: Hierarchical Group Lasso — Four Optimisation Methods
 
 <p align="center">
-  <img src="https://img.shields.io/badge/python-3.9%2B-blue" alt="Python 3.9+">
-  <img src="https://img.shields.io/badge/method-hierarchical%20group%20lasso-lightgrey" alt="Hierarchical group lasso">
-  <img src="https://img.shields.io/badge/tasks-binary%20classification-lightgrey" alt="Binary classification">
+  <img src="https://img.shields.io/badge/License-MIT-green.svg" alt="MIT license">
+  <a href="requirements.txt"><img src="https://img.shields.io/badge/Python-3.9%2B-3776AB.svg" alt="Python 3.9+"></a>
 </p>
 
 Reference implementation for the paper:
