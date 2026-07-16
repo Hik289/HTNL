@@ -196,3 +196,16 @@ Results in the paper used:
 - Zhao et al. (2019). *Hierarchical Tensor-Network Lasso for Twitter Civil Unrest Prediction*.
   IEEE TKDE. DOI: 10.1109/TKDE.2019.2912187
 - Song & Zhao (2024). *Hierarchical Kernel Learning*. NeurIPS 2024.
+
+## Citation
+
+If you use this implementation, please cite the accompanying manuscript:
+
+```bibtex
+@misc{htnl2026optimising,
+  title  = {Optimising Hierarchical Tensor-Network Lasso: A Comparative Study of Four Algorithms on Real-World Binary Classification Datasets},
+  author = {Anonymous Authors},
+  year   = {2026},
+  note   = {Code release}
+}
+```
