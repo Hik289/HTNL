@@ -12,6 +12,12 @@ Reference implementation for the paper:
 
 ---
 
+## At a Glance
+
+- **Research question.** Which optimization strategy is most reliable for hierarchical tensor-network lasso on real binary classification tasks?
+- **Core idea.** The repository compares four solvers under a common data, hyperparameter, and evaluation interface.
+- **What is included.** Implementations, synthetic checks, real-data runners, hyperparameter settings, and reproducibility notes.
+
 ## Overview
 
 This repository provides Python implementations of four algorithms for
@@ -138,7 +144,7 @@ Output: `results/summary.json` and `results/summary.csv`.
 
 ---
 
-## Programmatic Usage
+## Programmatic Use
 
 ```python
 import numpy as np
