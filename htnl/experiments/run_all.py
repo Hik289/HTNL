@@ -10,16 +10,16 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-ROOT = os.path.dirname(HERE)
+ROOT = os.path.dirname(os.path.dirname(HERE))
 if ROOT not in sys.path:
     sys.path.insert(0, ROOT)
 
-from data.synthetic import generate_synthetic
-from models.ncf import ConjunctionLattice
-from models.htnl_original import solve_htnl_original
-from models.htnl_vqf import solve_vqf
-from models.htnl_admm import solve_admm
-from models.htnl_wgl import solve_wgl
+from htnl.data.synthetic import generate_synthetic
+from htnl.models.ncf import ConjunctionLattice
+from htnl.models.htnl_original import solve_htnl_original
+from htnl.models.htnl_vqf import solve_vqf
+from htnl.models.htnl_admm import solve_admm
+from htnl.models.htnl_wgl import solve_wgl
 
 METHODS = {
     'HTNL-Original': solve_htnl_original,
