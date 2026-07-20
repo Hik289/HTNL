@@ -1,21 +1,40 @@
+# Local OS/editor noise
+.DS_Store
+.AppleDouble
+._*
+.vscode/
+.idea/
+*.swp
+*~
+
+# Python cache/build artifacts
 __pycache__/
 *.py[cod]
 *$py.class
-
-.DS_Store
-.venv/
-venv/
-env/
-
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
 .coverage
 htmlcov/
-
+*.egg-info/
 build/
 dist/
-*.egg-info/
 
-results/
+# Local environments and secrets
+.venv/
+venv/
+env/
+.env
+.env.*
+!.env.example
+
+# Local data and experiment outputs
 /data/
+results/
+outputs/
+runs/
+logs/
+wandb/
+checkpoints/
+*.log
+*.tmp

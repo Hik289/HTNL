@@ -1,7 +1,7 @@
 # HTNL: Hierarchical Group Lasso — Four Optimisation Methods
 
 <p align="center">
-  <img src="https://img.shields.io/badge/License-MIT-green.svg" alt="MIT license">
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-green.svg" alt="MIT license"></a>
   <a href="requirements.txt"><img src="https://img.shields.io/badge/Python-3.9%2B-3776AB.svg" alt="Python 3.9+"></a>
 </p>
 
@@ -196,6 +196,13 @@ Results in the paper used:
 - Zhao et al. (2019). *Hierarchical Tensor-Network Lasso for Twitter Civil Unrest Prediction*.
   IEEE TKDE. DOI: 10.1109/TKDE.2019.2912187
 - Song & Zhao (2024). *Hierarchical Kernel Learning*. NeurIPS 2024.
+
+## Artifact Checklist
+
+- **Code release.** Core implementations, configuration files, and reproduction entry points are versioned in this repository.
+- **Reproducibility.** Start with the smoke or quick-start path before paper-scale runs; record the commit hash, Python version, backend/model identifiers, seeds, and command-line arguments.
+- **Data and credentials.** Large datasets, benchmark downloads, generated outputs, and API keys are intentionally excluded. Use the data and configuration notes above to recreate them or point to local copies.
+- **Reporting.** For paper-scale runs, keep raw run folders immutable and regenerate tables or figures from the logged artifacts with the listed analysis scripts.
 
 ## Citation
 
