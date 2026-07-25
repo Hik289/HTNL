@@ -126,31 +126,13 @@ def compute_objective(W, Phi, Y, U, groups, C=1.0, p=1.5, mode='squared'):
 
 # ------------------------ Active-set / KKT --------------------------
 
-def kkt_violation_score(W, Phi, Y, U_active, lattice, candidate_v,
-                        groups, C, delta=0.5):
-    """Score for adding v to active set: max_g ||grad_v on group g|| / d_v.
-
-    Computes phi_v on the fly for each task using lattice.phi.
-    """
-    grads_per_g = np.zeros(len(groups))
-    for g_idx, g in enumerate(groups):
-        block = []
-        for s in g:
-            margin = 1.0 - Y[s] * (Phi[s] @ W[s])
-            _, deriv = huber_hinge_loss(margin, delta)
-            # phi_v for this task for each t
-            phi_v_t = np.array([
-                ConjunctionLattice.phi(m, candidate_v) for m in _msgs_for_task(s)
-            ]) if False else None
-            # We can't recompute phi without raw X; the caller must pass phi_v_per_task.
-            raise RuntimeError("kkt_violation_score requires precomputed phi_v")
-    return grads_per_g.max() / (2.0 ** len(candidate_v))
-
 
 def kkt_score_with_phi(W, Phi_dict, Y, candidate_v, phi_v_dict, groups, C,
                        delta=0.5):
-    """Compute KKT violation score given precomputed phi_v_dict {s: array(T)}.
-    Score = max_g ||{<phi_v, hinge_deriv*y>_s}_{s in g}||_2 / d_v
+    """Compute a KKT violation score from precomputed candidate features.
+
+    ``phi_v_dict`` maps each task to its candidate-feature vector. The score is
+    ``max_g ||{<phi_v, hinge_deriv*y>_s}_{s in g}||_2 / d_v``.
     """
     grads = {}
     for s, Ps in Phi_dict.items():
