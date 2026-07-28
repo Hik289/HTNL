@@ -12,11 +12,15 @@ Reference implementation for the paper:
 
 ---
 
-## Repository Summary
+## At A Glance
 
-- **Scope.** Which optimization strategy is most reliable for hierarchical tensor-network lasso on real binary classification tasks?
-- **Method.** The repository compares four solvers under a common data, hyperparameter, and evaluation interface.
-- **Contents.** Implementations, synthetic checks, real-data runners, hyperparameter settings, and reproducibility notes.
+| Artifact review question | Entry point |
+| --- | --- |
+| Research question | Which optimization strategy is most reliable for hierarchical tensor-network lasso on real binary classification tasks? |
+| Core method | The repository compares four solvers under a common data, hyperparameter, and evaluation interface. |
+| Included artifacts | Implementations, synthetic checks, real-data runners, hyperparameter settings, and reproducibility notes. |
+| Fast validation | `python -m htnl.experiments.run_all` |
+| Paper-scale reproduction | `python -m htnl.experiments.run_real_data --seeds 0 1 2 --out results/` after placing the datasets. |
 
 ## Overview
 
