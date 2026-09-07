@@ -116,10 +116,6 @@ def run(n_seeds=5, V=10, S=12, T=100, C=1.0, p=1.5, save_dir=None, verbose=False
               f"{np.mean(res['sel_size']):>9.1f} "
               f"{np.mean(res['time']):>9.1f}")
 
-    # ---- Save convergence plot (first seed) ----
-    # Each method has its own scale (squared vs linear Omega form).
-    # Plot running-min objective (best so far) to remove transient spikes
-    # caused by active-set expansion / alternating updates.
     fig, ax = plt.subplots(figsize=(8, 5))
     colors = ['#2196F3', '#4CAF50', '#FF9800', '#9C27B0']
     styles = ['-', '--', '-', ':']
